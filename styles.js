@@ -14,6 +14,8 @@ export default createGlobalStyle`
     background-color: #22262F;
     margin: 10px;
     color: whitesmoke;
+    display: flex;
+    justify-content: center;
   }
 
   Article {

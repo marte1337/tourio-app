@@ -15,7 +15,7 @@ export default async function handler(request, response) {
     return response.status(200).json(place);
   }
 
-  if (request.method === "PUT") {
+  if (request.method === "PATCH") {
     await Place.findByIdAndUpdate(id, {
       $set: request.body,
     });

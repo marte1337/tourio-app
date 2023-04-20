@@ -8,7 +8,7 @@ const Main = styled.main`
   margin-top: 5rem;
   padding: 0.5rem;
   position: relative;
-  min-width: 200px;
+  min-width: 400px;
   max-width: 600px;
 `;
 

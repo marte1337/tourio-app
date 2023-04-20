@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const StyledButton = styled.button`
-  background-color: green;
+  background-color: #82868f;
   padding: 0.8rem;
   border-radius: 0.6rem;
   color: black;
   text-decoration: none;
   font-weight: bold;
-  border: none;
+  border: 3px solid orange;
   font-size: inherit;
 
   ${({ variant }) =>
