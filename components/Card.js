@@ -16,7 +16,9 @@ export default function Card({ name, image, location, id }) {
             alt=""
           />
         </ImageContainer>
-        <figcaption>{name}</figcaption>
+        <figcaption>
+          <strong>{name}</strong>
+        </figcaption>
       </Figure>
       <p>Location: {location}</p>
       <Link href={`places/${id}`} passHref legacyBehavior>
@@ -31,12 +33,13 @@ export default function Card({ name, image, location, id }) {
 const Article = styled.article`
   border: 3px orange solid;
   border-radius: 0.8rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   height: 10rem;
+  margin-bottom: 1rem;
 `;
 
 const Figure = styled.figure`

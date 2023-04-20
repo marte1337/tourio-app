@@ -5,9 +5,6 @@ export default createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-
-
-    
   }
 
   body {
@@ -18,7 +15,6 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
     font-family: 'monospace','Roboto', sans-serif;
-
   }
 
   Article {

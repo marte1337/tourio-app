@@ -77,7 +77,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
         defaultValue={defaultData?.description}
         required
       ></Textarea>
-      <StyledButton type="submit" onClick={() => router.push("/")}>
+      <StyledButton type="submit">
         {defaultData ? "Update place" : "Add place"}
       </StyledButton>
     </FormContainer>

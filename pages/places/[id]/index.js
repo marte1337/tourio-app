@@ -83,7 +83,7 @@ const ButtonContainer = styled.section`
 
 const StyledLocationLink = styled(StyledLink)`
   text-align: center;
-  background-color: #42464f;
+  background-color: #42864f;
   color: whitesmoke;
-  border: 3px solid lightsalmon;
+  border: 3px solid orange;
 `;

@@ -8,7 +8,7 @@ const Main = styled.main`
   margin-top: 5rem;
   padding: 0.5rem;
   position: relative;
-  min-width: 600px;
+  min-width: 400px;
   max-width: 800px;
 `;
 
@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Tourio</title>
+        <title>Tourio®</title>
       </Head>
       <TitleBar />
       <Main>{children}</Main>
