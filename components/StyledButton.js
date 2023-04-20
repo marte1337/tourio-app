@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   font-weight: bold;
   border: 3px solid orange;
   font-size: inherit;
+  box-shadow: 0 2px 8px -1px black;
 
   ${({ variant }) =>
     variant === "delete" &&
