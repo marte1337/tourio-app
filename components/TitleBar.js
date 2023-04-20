@@ -11,6 +11,7 @@ const Headline = styled.h1`
   padding: 20px;
   text-align: center;
   z-index: 1;
+  box-shadow: 0 0 5px -1px black;
 `;
 
 export default function TitleBar() {

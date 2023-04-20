@@ -10,7 +10,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #22262F;
     margin: 10px;
     color: whitesmoke;

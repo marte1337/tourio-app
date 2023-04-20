@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const StyledLink = styled.a`
-  background-color: lightsalmon;
+  background-color: #22262f;
+  border: 3px solid orange;
   padding: 0.8rem 1.5rem;
   border-radius: 0.6rem;
   color: black;
   text-decoration: none;
   font-weight: bold;
+  color: white;
 
   ${({ justifySelf }) =>
     justifySelf &&
