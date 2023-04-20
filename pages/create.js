@@ -29,10 +29,7 @@ export default function CreatePlacePage() {
     const formData = new FormData(event.target);
     const placeData = Object.fromEntries(formData);
 
-    // console.log(placeData);
-
     trigger(placeData);
-
     router.push("/");
   }
 

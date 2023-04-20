@@ -2,37 +2,8 @@ import styled from "styled-components";
 import { StyledButton } from "./StyledButton.js";
 import { useRouter } from "next/router";
 
-const FormContainer = styled.form`
-  display: grid;
-  gap: 0.5rem;
-`;
-
-const Input = styled.input`
-  padding: 0.5rem;
-  font-size: inherit;
-  border: 3px solid orange;
-  border-radius: 0.5rem;
-`;
-
-const Textarea = styled.textarea`
-  font-family: inherit;
-  border: 3px solid orange;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-`;
-
-const Label = styled.label`
-  font-weight: bold;
-`;
-
 export default function Form({ onSubmit, formName, defaultData }) {
   const router = useRouter();
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const formData = new FormData(event.target);
-  //   const data = Object.fromEntries(formData);
-  //   onSubmit(data);
-  // }
 
   return (
     <FormContainer aria-labelledby={formName} onSubmit={onSubmit}>
@@ -83,3 +54,26 @@ export default function Form({ onSubmit, formName, defaultData }) {
     </FormContainer>
   );
 }
+
+const FormContainer = styled.form`
+  display: grid;
+  gap: 0.5rem;
+`;
+
+const Input = styled.input`
+  padding: 0.5rem;
+  font-size: inherit;
+  border: 3px solid orange;
+  border-radius: 0.5rem;
+`;
+
+const Textarea = styled.textarea`
+  font-family: inherit;
+  border: 3px solid orange;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+`;
+
+const Label = styled.label`
+  font-weight: bold;
+`;

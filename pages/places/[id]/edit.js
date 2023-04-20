@@ -36,6 +36,7 @@ export default function EditPage() {
     const placeData = Object.fromEntries(formData);
 
     trigger(placeData);
+    router.push("/");
   }
 
   if (!isReady || isLoading || error || isMutating) return <h2>Loading...</h2>;
