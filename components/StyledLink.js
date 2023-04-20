@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledLink = styled.a`
-  background-color: #22262f;
+  background-color: #42464f;
   border: 3px solid orange;
   padding: 0.8rem 1.5rem;
   border-radius: 0.6rem;
