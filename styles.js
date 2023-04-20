@@ -24,4 +24,8 @@ export default createGlobalStyle`
   Article {
     background-color: #32363F;
   }
+
+  h2{
+    padding-top: 10px;
+  }
 `;
