@@ -23,6 +23,7 @@ export default createGlobalStyle`
 
   Article {
     background-color: #32363F;
+    box-shadow: 0 2px 8px -1px black;
   }
 
   h2{
