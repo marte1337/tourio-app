@@ -13,6 +13,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
         name="name"
         type="text"
         defaultValue={defaultData?.name}
+        placeholder="Enter Place Name"
         required
       />
       <Label htmlFor="image-url">
@@ -21,7 +22,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Unsplash Image Url
+          Unsplash Image<Span> ➦🏛️</Span>
         </A>
       </Label>
       <Input
@@ -29,6 +30,8 @@ export default function Form({ onSubmit, formName, defaultData }) {
         name="image"
         type="text"
         defaultValue={defaultData?.image}
+        placeholder="https://images.unsplash.com/photo..."
+        pattern="https://images.unsplash.com/photo.*"
         required
       />
       <Label htmlFor="location">Location</Label>
@@ -37,6 +40,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
         name="location"
         type="text"
         defaultValue={defaultData?.location}
+        placeholder="Enter Location"
         required
       />
       <Label htmlFor="map-url">
@@ -46,7 +50,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Google Map Url
+          Google Maps Url <Span> ➦🌎</Span>
         </A>
       </Label>
       <Input
@@ -54,6 +58,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
         name="mapURL"
         type="text"
         defaultValue={defaultData?.mapURL}
+        placeholder="https://www.google.com/maps..."
         required
       />
       <Label htmlFor="description">Description</Label>
@@ -63,6 +68,7 @@ export default function Form({ onSubmit, formName, defaultData }) {
         cols="30"
         rows="10"
         defaultValue={defaultData?.description}
+        placeholder="Enter Description"
         required
       ></Textarea>
       <StyledButton type="submit">
@@ -93,9 +99,17 @@ const Textarea = styled.textarea`
 
 const Label = styled.label`
   font-weight: bold;
+  padding-top: 0.5rem;
 `;
 
 const A = styled.a`
   color: white;
-  text-decoration-color: lightgrey;
+  text-decoration: none;
+`;
+
+const Span = styled.span`
+  opacity: 0.3;
+  :hover {
+    opacity: 1;
+  }
 `;

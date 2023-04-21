@@ -31,8 +31,4 @@ export default createGlobalStyle`
     font-weight: 300;
     color: #bbb;
   }
-
-  Link{
-    color: red;
-  }
 `;
