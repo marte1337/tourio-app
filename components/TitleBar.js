@@ -9,12 +9,21 @@ const Headline = styled.h1`
   font-size: 2.5rem;
   color: white;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   z-index: 1;
   box-shadow: 0 0 5px -1px black;
+  height: 90px;
 `;
 
+const titel = "Tourio",
+  description = <div className="description">your favorite places to be</div>;
+
 export default function TitleBar() {
-  return <Headline>Tourio</Headline>;
+  return (
+    <Headline>
+      {titel}
+      {description}
+    </Headline>
+  );
 }

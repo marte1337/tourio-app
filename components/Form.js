@@ -15,7 +15,15 @@ export default function Form({ onSubmit, formName, defaultData }) {
         defaultValue={defaultData?.name}
         required
       />
-      <Label htmlFor="image-url">Image Url</Label>
+      <Label htmlFor="image-url">
+        <A
+          href="https://unsplash.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Unsplash Image Url
+        </A>
+      </Label>
       <Input
         id="image-url"
         name="image"
@@ -31,7 +39,16 @@ export default function Form({ onSubmit, formName, defaultData }) {
         defaultValue={defaultData?.location}
         required
       />
-      <Label htmlFor="map-url">Map Url</Label>
+      <Label htmlFor="map-url">
+        {" "}
+        <A
+          href="https://www.google.com/maps"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Map Url
+        </A>
+      </Label>
       <Input
         id="map-url"
         name="mapURL"
@@ -76,4 +93,9 @@ const Textarea = styled.textarea`
 
 const Label = styled.label`
   font-weight: bold;
+`;
+
+const A = styled.a`
+  color: white;
+  text-decoration-color: lightgrey;
 `;

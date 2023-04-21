@@ -8,8 +8,8 @@ const Main = styled.main`
   margin-top: 5rem;
   padding: 0.5rem;
   position: relative;
-  min-width: 400px;
-  max-width: 800px;
+  width: 95vw;
+  max-width: 600px;
 `;
 
 export default function Layout({ children }) {

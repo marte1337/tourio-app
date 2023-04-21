@@ -50,9 +50,13 @@ export default function DetailsPage() {
         {place.name}, {place.location}
       </h2>
       <Link href={place.mapURL} passHref legacyBehavior>
-        <StyledLocationLink>Location on Google Maps</StyledLocationLink>
+        <StyledLocationLink target="_blank" rel="noopener noreferrer">
+          Location on Google Maps
+        </StyledLocationLink>
       </Link>
-      <p>{place.description}</p>
+      <p>
+        Description: <strong>{place.description}</strong>
+      </p>
       <ButtonContainer>
         <Link href={`/places/${id}/edit`} passHref legacyBehavior>
           <StyledLink>Edit</StyledLink>
@@ -83,7 +87,7 @@ const ButtonContainer = styled.section`
 
 const StyledLocationLink = styled(StyledLink)`
   text-align: center;
-  background-color: #42864f;
+  background-color: #22466f;
   color: whitesmoke;
   border: 3px solid orange;
 `;

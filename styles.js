@@ -14,7 +14,7 @@ export default createGlobalStyle`
     color: whitesmoke;
     display: flex;
     justify-content: center;
-    font-family: 'monospace','Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   Article {
@@ -24,5 +24,15 @@ export default createGlobalStyle`
 
   h2{
     padding-top: 10px;
+  }
+
+  .description{
+    font-size: 0.4em;
+    font-weight: 300;
+    color: #bbb;
+  }
+
+  Link{
+    color: red;
   }
 `;
