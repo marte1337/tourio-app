@@ -8,14 +8,15 @@ export default async function handler(request, response) {
   const session = await getServerSession(request, response, authOptions);
 
   if (request.method === "GET") {
-    const places = await Place.find();
+    const places = await Place.find({ author: session.user.email });
     return response.status(200).json(places);
   }
 
   if (session) {
     try {
       const placeData = request.body;
-      await Place.create(placeData);
+      const place = new Place({ ...placeData, author: session.user.email });
+      await place.save();
       return response.status(201).json({ status: "Place created." });
     } catch (error) {
       console.error(error);
