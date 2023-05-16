@@ -15,7 +15,7 @@ export default async function handler(request, response) {
   if (session) {
     try {
       const placeData = request.body;
-      const place = new Place({ ...placeData, author: session.user.email });
+      const place = new Place({ ...placeData, author: session?.user.email });
       await place.save();
       return response.status(201).json({ status: "Place created." });
     } catch (error) {
