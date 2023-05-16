@@ -23,7 +23,7 @@ async function sendRequest(url, { arg }) {
 export default function CreatePlacePage() {
   const { trigger } = useSWRMutation("/api/places", sendRequest);
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: status } = useSession();
 
   function addPlace(event) {
     event.preventDefault();
@@ -34,7 +34,7 @@ export default function CreatePlacePage() {
     trigger(placeData);
     router.push("/");
   }
-  if (!session) {
+  if (status !== "authenticated") {
     return <h1>Access denied</h1>;
   }
   return (
