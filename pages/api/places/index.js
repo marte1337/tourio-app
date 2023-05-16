@@ -5,7 +5,7 @@ import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(request, response) {
   await dbConnect();
-  const session = await getServerSession(req, res, authOptions);
+  const session = await getServerSession(request, response, authOptions);
 
   if (request.method === "GET") {
     const places = await Place.find();
