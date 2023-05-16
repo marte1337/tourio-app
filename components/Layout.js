@@ -1,6 +1,7 @@
 import TitleBar from "./TitleBar.js";
 import styled from "styled-components";
 import Head from "next/head.js";
+import Login from "./Login.js";
 
 const Main = styled.main`
   display: grid;
@@ -19,7 +20,10 @@ export default function Layout({ children }) {
         <title>Tourio®</title>
       </Head>
       <TitleBar />
-      <Main>{children}</Main>
+      <Main>
+        <Login />
+        {children}
+      </Main>
     </>
   );
 }

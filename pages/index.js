@@ -3,6 +3,7 @@ import Card from "../components/Card.js";
 import useSWR from "swr";
 import Link from "next/link.js";
 import { StyledLink } from "../components/StyledLink.js";
+import { useSession } from "next-auth/react";
 
 const List = styled.ul`
   list-style: none;
@@ -25,7 +26,7 @@ const FixedLink = styled(StyledLink)`
 export default function Home() {
   const { data } = useSWR("/api/places", { fallbackData: [] });
 
-  // console.log(data);
+  const { data: session } = useSession();
 
   return (
     <>
@@ -43,9 +44,11 @@ export default function Home() {
           );
         })}
       </List>
-      <Link href="/create" passHref legacyBehavior>
-        <FixedLink>+ place</FixedLink>
-      </Link>
+      {session && (
+        <Link href="/create" passHref legacyBehavior>
+          <FixedLink>+ place</FixedLink>
+        </Link>
+      )}
     </>
   );
 }

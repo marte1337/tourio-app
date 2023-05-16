@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import useSWRMutation from "swr/mutation";
 import Form from "../components/Form.js";
 import { StyledLink } from "../components/StyledLink.js";
+import { useSession } from "next-auth/react";
 
 async function sendRequest(url, { arg }) {
   const response = await fetch(url, {
@@ -22,6 +23,7 @@ async function sendRequest(url, { arg }) {
 export default function CreatePlacePage() {
   const { trigger } = useSWRMutation("/api/places", sendRequest);
   const router = useRouter();
+  const { data: session } = useSession();
 
   function addPlace(event) {
     event.preventDefault();
@@ -32,7 +34,9 @@ export default function CreatePlacePage() {
     trigger(placeData);
     router.push("/");
   }
-
+  if (!session) {
+    return <h1>Access denied</h1>;
+  }
   return (
     <>
       <h2 id="add-place">Add Place</h2>
