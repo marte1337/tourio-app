@@ -8,7 +8,7 @@ export default async function handler(request, response) {
   const session = await getServerSession(request, response, authOptions);
 
   if (request.method === "GET") {
-    const places = await Place.find({ author: session.user.email });
+    const places = await Place.find({ author: session?.user.email });
     return response.status(200).json(places);
   }
 
